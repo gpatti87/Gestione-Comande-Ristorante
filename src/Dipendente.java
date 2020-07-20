@@ -237,7 +237,7 @@ public class Dipendente {
 
 
                                 msg_received = server_scanner.next();
-                                System.out.println("Il conto del tavolo "+idT+"e': "+msg_received);
+                                System.out.println("Il conto del tavolo "+idT+" e': "+msg_received);
 
                                 break;
                             case 3:
