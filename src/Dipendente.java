@@ -274,7 +274,7 @@ public class Dipendente {
                                 pw.println(msg_to_send);
                                 pw.flush();
 
-                                msg_received = server_scanner.next();
+                                msg_received = server_scanner.nextLine();
                                 boolean listingc = true;
                                 if (msg_received.equals("BEGIN")) {
                                     System.out.println("Receiving list...");
