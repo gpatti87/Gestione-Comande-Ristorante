@@ -24,11 +24,12 @@ public class ConsumazioneList {
             if( (co.getNome().equals(nome)))
             {
                 list.remove(co);
+                break;
             }
-            else{
-                System.out.println("Pietanza non presente");
-            }
+
         }
+        System.out.println("Pietanza non presente");
+
     }
 
 

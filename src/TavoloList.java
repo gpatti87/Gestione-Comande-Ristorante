@@ -24,11 +24,11 @@ public class TavoloList {
             if( (ta.getID()==t.getID()))
             {
                 list.remove(ta);
+                break;
             }
-            else{
-                System.out.println("There isn't this Person");
-            }
+
         }
+        System.out.println("Tavolo non presente");
     }
 
 
