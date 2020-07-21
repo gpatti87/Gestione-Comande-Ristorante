@@ -232,7 +232,7 @@ public class ClientManager implements Runnable {
 
                     }
                 }
-                pw.println("Tavolo non presente");
+                pw.println("LIST_ERROR");
                 pw.flush();
 
             }
