@@ -305,6 +305,7 @@ public class Dipendente {
                                 } else {
                                     System.out.println("ERROR: Unknown message-> " + msg_received);
                                 }
+                                break;
                             case 6:
                                 gocameriere = false;
                                 System.out.println("Torna Indietro");
