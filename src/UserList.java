@@ -25,11 +25,9 @@ public class UserList implements Serializable {
         for( Utente ut : list){
             if( (ut.getCF().equals(cf))){
                 list.remove(ut);
+                break;
+            }
 
-            }
-            else{
-                System.out.println("Utente non presente");
-            }
         }
     }
 
