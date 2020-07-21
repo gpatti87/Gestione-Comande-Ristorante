@@ -99,7 +99,7 @@ public class Dipendente {
                                 pw.println(msg_to_send);
                                 pw.flush();
 
-                                msg_received = server_scanner.next();
+                                msg_received = server_scanner.nextLine();
                                 boolean listing = true;
                                 if (msg_received.equals("BEGIN")) {
                                     System.out.println("Receiving list...");
@@ -121,7 +121,7 @@ public class Dipendente {
                                 pw.println(msg_to_send);
                                 pw.flush();
 
-                                msg_received = server_scanner.next();
+                                msg_received = server_scanner.nextLine();
                                 boolean listingt = true;
                                 if (msg_received.equals("BEGIN")) {
                                     System.out.println("Receiving list...");
@@ -147,7 +147,7 @@ public class Dipendente {
                                 pw.println(msg_to_send);
                                 pw.flush();
 
-                                msg_received = server_scanner.next();
+                                msg_received = server_scanner.nextLine();
                                 boolean listingc = true;
                                 if (msg_received.equals("BEGIN")) {
                                     System.out.println("Receiving list...");
@@ -239,7 +239,7 @@ public class Dipendente {
                                 pw.flush();
 
 
-                                msg_received = server_scanner.next();
+                                msg_received = server_scanner.nextLine();
                                 System.out.println("Il conto del tavolo "+idT+" e': "+msg_received);
 
                                 break;
@@ -248,7 +248,7 @@ public class Dipendente {
                                 pw.println(msg_to_send);
                                 pw.flush();
 
-                                msg_received = server_scanner.next();
+                                msg_received = server_scanner.nextLine();
                                 boolean listing = true;
                                 if (msg_received.equals("BEGIN")) {
                                     System.out.println("Receiving list...");
@@ -274,7 +274,7 @@ public class Dipendente {
                                 pw.println(msg_to_send);
                                 pw.flush();
 
-                                msg_received = server_scanner.next();
+                                msg_received = server_scanner.nextLine();
                                 boolean listingc = true;
                                 if (msg_received.equals("BEGIN")) {
                                     System.out.println("Receiving list...");
