@@ -283,12 +283,14 @@ public class Dipendente {
                                         if (msg_received.equals("END")) {
                                             listingc = false;
                                             System.out.println("List ended");
-                                        } else {//printing the person
+                                        } else {
                                             System.out.println(msg_received);
                                         }
                                     }
+                                } else if (msg_received.equals("TAVOLO_ERROR")) {
+                                    System.out.println("Errore!!! Tavolo non presente");
                                 } else {
-                                    System.out.println("Unknown Response: " + msg_received);
+                                    System.out.println("ERROR: Unknown message-> " + msg_received);
                                 }
                                 break;
                             case 5:
