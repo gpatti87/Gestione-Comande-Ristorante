@@ -160,10 +160,10 @@ public class Dipendente {
                                             System.out.println(msg_received);
                                         }
                                     }
-                                }else if(msg_received.equals("LIST_ERROR")) {
-                                    System.out.println("Tavolo non presente");
-                                }else {
-                                    System.out.println("Unknown Response: " + msg_received);
+                                }else if (msg_received.equals("LIST_ERROR")) {
+                                    System.out.println("Errore!!! Tavolo non presente");
+                                } else {
+                                    System.out.println("ERROR: Unknown message-> " + msg_received);
                                 }
                                 break;
                             case 5:
