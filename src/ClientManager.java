@@ -163,9 +163,24 @@ public class ClientManager implements Runnable {
             }
             else if (cmd.equals("REMOVE_Pietanza")){
                 String nome = msg_scanner.next();
-                menu.remove(nome);
+                String verdetto = menu.remove(nome);
 
-                pw.println("REMOVE_OK");
+                pw.println(verdetto);
+                pw.flush();
+
+            }else if (cmd.equals("REMOVE_Tavolo")){
+                int id = msg_scanner.nextInt();
+                String verdetto=null;
+                ArrayList<Tavolo> tmp;
+                tmp = ltavolo.getListCopy();
+
+                for (Tavolo ta: tmp) {
+                    if (id == ta.getID()) {
+                         verdetto = ltavolo.remove(ta);
+                    }
+                }
+
+                pw.println(verdetto);
                 pw.flush();
 
             }

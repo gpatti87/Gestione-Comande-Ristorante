@@ -18,17 +18,22 @@ public class TavoloList {
         last_modification = new Date().toString();
         list.add(t);
     }
-    public synchronized void remove(Tavolo t){
+    public synchronized String remove(Tavolo t){
         last_modification = new Date().toString();
+        String verdetto=null;
         for( Tavolo ta : list){
             if( (ta.getID()==t.getID()))
             {
                 list.remove(ta);
-                break;
+                verdetto = "REMOVE_OK";
+                return verdetto;
             }
 
         }
         System.out.println("Tavolo non presente");
+        verdetto = "REMOVE_ERROR";
+        return verdetto;
+
     }
 
 

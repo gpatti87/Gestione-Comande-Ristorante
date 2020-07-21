@@ -19,18 +19,23 @@ public class Menu {
         list.add(c);
         saveMenu(list);
     }
-    public synchronized void remove(String nome){
+    public synchronized String remove(String nome){
         last_modification = new Date().toString();
+        String verdetto=null;
         for( Consumazione co : list){
             if( (co.getNome().equals(nome)))
             {
                 list.remove(co);
                 saveMenu(list);
-                break;
+                verdetto = "REMOVE_OK";
+                return verdetto;
             }
 
         }
         System.out.println("Pietanza non presente nel Menu'");
+        verdetto = "REMOVE_ERROR";
+        return verdetto;
+
 
 
     }

@@ -87,7 +87,7 @@ public class Dipendente {
                                 msg_received = server_scanner.nextLine();
 
                                 if (msg_received.equals("REMOVE_OK")) {
-                                    System.out.println("Pietanza eliminata eliminata!");
+                                    System.out.println("Pietanza eliminata!");
                                 } else if (msg_received.equals("REMOVE_ERROR")) {
                                     System.out.println("Errore!!!");
                                 } else {
@@ -180,7 +180,8 @@ public class Dipendente {
                         System.out.println("2 - Conto");
                         System.out.println("3 - Mostra Menù");
                         System.out.println("4 - Mostra Comanda");
-                        System.out.println("5 - QUIT");
+                        System.out.println("5 - Elimina Tavolo");
+                        System.out.println("6 - QUIT");
                         System.out.println("---------------------------");
                         System.out.println("Enter your choice-->");
                         choice = user_scanner.nextInt();
@@ -289,6 +290,22 @@ public class Dipendente {
                                 }
                                 break;
                             case 5:
+                                System.out.println("Inserire ID del tavolo da eliminare");
+                                int idTa = user_scanner.nextInt();
+                                msg_to_send = "REMOVE_Tavolo " + idTa;
+                                pw.println(msg_to_send);
+                                pw.flush();
+
+                                msg_received = server_scanner.nextLine();
+
+                                if (msg_received.equals("REMOVE_OK")) {
+                                    System.out.println("Tavolo Eliminato!");
+                                } else if (msg_received.equals("REMOVE_ERROR")) {
+                                    System.out.println("Errore!!!");
+                                } else {
+                                    System.out.println("ERROR: Unknown message-> " + msg_received);
+                                }
+                            case 6:
                                 gocameriere = false;
                                 System.out.println("Torna Indietro");
                                 break;

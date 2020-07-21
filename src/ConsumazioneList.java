@@ -18,17 +18,21 @@ public class ConsumazioneList {
         last_modification = new Date().toString();
         list.add(c);
     }
-    public synchronized void remove(String nome){
+    public synchronized String remove(String nome){
         last_modification = new Date().toString();
+        String verdetto = null;
         for( Consumazione co : list){
             if( (co.getNome().equals(nome)))
             {
                 list.remove(co);
-                break;
+                verdetto = "REMOVE_OK";
+                return verdetto;
             }
 
         }
         System.out.println("Pietanza non presente");
+        verdetto = "REMOVE_ERROR";
+        return verdetto;
 
     }
 
