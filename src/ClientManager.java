@@ -70,9 +70,10 @@ public class ClientManager implements Runnable {
             }
             else if (cmd.equals("REMOVE_Utente")){
                 String cf = msg_scanner.next();
-                lutente.remove(cf);
 
-                pw.println("REMOVE_OK");
+                String verdetto = lutente.remove(cf);
+
+                pw.println(verdetto);
                 pw.flush();
 
             }

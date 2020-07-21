@@ -20,16 +20,21 @@ public class UserList implements Serializable {
         last_modification = new Date().toString();
         list.add(p);
     }
-    public synchronized void remove(String cf){
+    public synchronized String remove(String cf){
         last_modification = new Date().toString();
+        String verdetto = null;
         for( Utente ut : list){
             if( (ut.getCF().equals(cf))){
                 list.remove(ut);
-                break;
+                verdetto ="REMOVE_OK";
+                return verdetto;
             }
 
         }
+
         System.out.println("Utente non PRESENTE");
+        verdetto ="REMOVE_ERROR";
+        return verdetto;
     }
 
 
